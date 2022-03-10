@@ -1150,6 +1150,8 @@ impl Event {
                     x,
                     y,
                     direction: direction.to_ll(),
+                    preciseX: x as f32,
+                    preciseY: y as f32
                 };
                 unsafe {
                     ptr::copy(&event, ret.as_mut_ptr() as *mut sys::SDL_MouseWheelEvent, 1);
